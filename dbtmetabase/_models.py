@@ -447,6 +447,9 @@ class ModelsMixin(metaclass=ABCMeta):
         if settings.get("currency") != column.currency and column.currency:
             settings["currency"] = column.currency
             settings_updated = True
+        if settings.get("currency_in_header") != column.currency_in_header and column.currency_in_header is not None:
+            settings["currency_in_header"] = column.currency_in_header
+            settings_updated = True
 
         if settings_updated:
             body_field["settings"] = settings

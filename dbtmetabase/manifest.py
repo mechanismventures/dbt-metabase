@@ -31,6 +31,7 @@ _COLUMN_META_FIELDS = _COMMON_META_FIELDS + [
     "number_style",
     "decimals",
     "currency",
+    "currency_in_header",
 ]
 # Must be covered by Model attributes
 _MODEL_META_FIELDS = _COMMON_META_FIELDS + [
@@ -390,6 +391,7 @@ class Column:
     number_style: str | None = None
     decimals: int | None = None
     currency: str | None = None
+    currency_in_header: bool | None = None
 
     fk_target_table: str | None = None
     fk_target_field: str | None = None
